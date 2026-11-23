@@ -2,8 +2,6 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · for KinkiestDungeon **5.5.12+**
 
-> I know this doc has a really strong, weird AI-generated feel, and I hate it. But I spent the entire day editing it and then it got ruined!!!! Okay, I give up—please just let me set it aside for now.
-
 **Restraints you put on and locked yourself don't consume a key or keycard when you unlock them.** You still need to be carrying at least one matching key — it just doesn't get eaten.
 
 In the vanilla game, every unlock costs a key. SelfKey only removes the cost in the one case where you did the locking yourself; everything else is plain vanilla.
