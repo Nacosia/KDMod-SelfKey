@@ -1,62 +1,47 @@
 # SelfKey
 
-[English](README.md) · [中文](README.zh-CN.md) · for KinkiestDungeon **5.5.12+**
+[English](README.md) · [中文](README.zh-CN.md) · For KinkiestDungeon **5.5.12+**
 
-> I know this doc has a really strong, weird AI-generated feel, and I hate it. But I spent the entire day editing it and then it got ruined!!!! Okay, I give up—please just let me set it aside for now.
+**Now you can put restraints on yourself "safely":** restraints you wear and lock yourself cost no key / keycard when unlocked (but you need at least one key on you). Note: whether something counts as "self-locked" is a flag this mod sets — anything put on before the mod was installed doesn't count.
 
-**Restraints you put on and locked yourself don't consume a key or keycard when you unlock them.** You still need to be carrying at least one matching key — it just doesn't get eaten.
+![In game: name mark, tooltip line and unlock message](docs/game-ui.png)
 
-In the vanilla game, every unlock costs a key. SelfKey only removes the cost in the one case where you did the locking yourself; everything else is plain vanilla.
+## What counts as "self-applied"
 
-![Name mark, tooltip line and unlock messages in game](docs/game-ui.png)
+1. **You put it on yourself**: from the inventory, from the restraint screen, or a self-bondage spell that runs through the normal equip flow.
+2. **The lock on it is one you applied**: a lock the item came with, or one you locked manually.
 
-## What counts as a self-lock
+By default both have to hold (**strict AND**) — the restraint must be worn by you *and* locked by you. Turn that off and only the lock has to be yours.
 
-Two things, tracked on the item itself:
+These still cost a key as usual:
 
-1. **You put the restraint on** — from the inventory, the restraint UI, or a bondage spell that equips through the normal path.
-2. **You applied the current lock** — the gear's built-in lock, or the "lock" action.
+- Restraints put on you by enemies, traps or living restraints
+- Locks swapped or upgraded by an enemy
+- Doors and chests, always
+- `Gold` / `GoldPlus` / `Masterwork`, not exempt by default (adjustable in the options)
 
-By default both must be true (**Strict AND**). Turn that off and only step 2 matters, which also makes "an enemy dressed me, I locked it" free.
+`Cyber` locks still don't raise the security value when unlocked.
 
-Still costs a key, exactly like vanilla:
+## In-game hints
 
-- anything an enemy, a trap or a living restraint put on you;
-- a lock that an enemy swapped or upgraded onto your gear — your own gear stops being free until you lock it yourself again;
-- doors and chests, always;
-- `Gold` / `GoldPlus` / `Masterwork` locks — unless you enable *Also exempt Gold / GoldPlus / Masterwork*.
+- Exempt restraints get a mark on their name: `※` by default, or `〔SB〕`; it works in the inventory, tooltips, equipment slots and messages.
+- The buff panel shows how many active self-locks you're wearing.
+- Locking something on yourself, and saving a key on an unlock, each print a line in the message log — both can be turned off separately.
 
-`Cyber` locks are free all the way: no keycard **and** no security build-up.
+## Options
 
-Unlock difficulty, success rate and the key you can drop on a failed attempt are untouched. SelfKey only decides whether a *successful* unlock consumes one.
+![Mod configuration page](docs/config.png)
 
-## What you'll see
-
-- A short mark in front of a self-locked restraint's name — `※` by default, `〔SB〕` if you prefer — in the inventory, tooltips, equipment list and messages. It only shows up when the free unlock is genuinely in effect, so you can trust it.
-- A tooltip line on worn restraints: *Self-lock: unlocking costs no key (still needs at least 1 key)*.
-- A counter in the HUD showing how many self-locks you're wearing.
-- A message whenever you lock something yourself, and whenever an unlock skips the key.
-
-All four are display only, and each can be switched off on its own.
-
-![Mod configuration page (mark set to 〔SB〕, placed after the name, in this shot)](docs/config.png)
-
-## Settings
-
-`Options → Mod Configuration → SelfKey`. The defaults are what you want; these are the ones worth knowing:
-
-| Setting | Default | What it does |
+| Option | Default | Notes |
 | --- | --- | --- |
-| Enable: self-locked restraints cost no keys | on | Master switch — off restores vanilla key costs. |
-| Strict AND (self-worn AND self-locked) | on | Off = only who applied the lock matters. |
-| Also exempt Gold / GoldPlus / Masterwork | off | High-end locks stay expensive by default. |
-
-## Install
-
-1. Grab `SelfKey.zip` from [Releases](../../releases).
-2. Standalone build: drop the zip into `<game>/Mods/` and start the game. Web build: turn on **Auto Load Mods**, then `Options → Mods → Load Mod .zip`, then reload the page.
-3. `Options → Mod Configuration → SelfKey`.
-
-## One gotcha
-
-Restraints you were already wearing when you installed the mod carry no marks, so they still cost keys. Take them off and put them on again once, and they'll behave.
+| Enable: self-locked restraints cost no keys | On | Master switch |
+| Strict AND (self-worn AND self-locked) | On | Off = only the lock has to be yours, so "enemy put it on, you locked it" is exempt too |
+| Also exempt Gold / GoldPlus / Masterwork | Off | Not exempt by default, since it shifts the balance too much |
+| Show a message when a key is saved | On | One line per free unlock |
+| Console debug logging | Off | Prints lock decisions to the browser console |
+| Show a mark next to self-locked restraint names | On | Display only, never affects the key check |
+| Mark before the name (off = after) | On | `※ Handcuffs` instead of `Handcuffs ※` |
+| Name mark | `※` | `※` or `〔SB〕` |
+| Show a message when you self-lock | On | One line each time you lock something on yourself |
+| Show a self-lock line in the tooltip | On | Greys out once the lock was swapped by an enemy |
+| Show the self-lock count in the HUD | On | Reuses the vanilla restraint icon |
