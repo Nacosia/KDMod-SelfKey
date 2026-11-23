@@ -1,0 +1,11 @@
+{
+	"modname": "SelfKey",
+	"moddesc": "Self-applied and self-locked restraints do not consume a key/keycard when unlocked, but you must still hold at least one corresponding key; locks on enemies, traps, and living beings consume keys as usual.",
+	"author": "09",
+	"modbuild": "1.1.2",
+	"gamemajor": 5,
+	"gameminor": 5,
+	"gamepatch_min": 12,
+	"gamepatch_max": -1,
+	"priority": 0
+}

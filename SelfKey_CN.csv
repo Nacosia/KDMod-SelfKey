@@ -1,0 +1,20 @@
+KDModButtonSelfKey,自缚钥匙 SelfKey
+KDModButtonKDSelfKeyEnabled,启用：自缚锁免钥匙
+KDModButtonKDSelfKeyRequireBoth,严格 AND（自缚穿戴 + 自锁都满足）
+KDModButtonKDSelfKeyFreePrecious,特殊锁也免（Gold / GoldPlus / Masterwork）
+KDModButtonKDSelfKeyNotify,显示免除成功提示消息
+KDModButtonKDSelfKeyDebug,控制台调试日志
+KDModButtonKDSelfKeyShowNameMark,在束具名字上加角标
+KDModButtonKDSelfKeyMarkPrefix,角标放在名字前面（否则在后面）
+KDModButtonKDSelfKeyShowLockMsg,自己上锁时显示提示
+KDModButtonKDSelfKeyShowTooltip,束缚具悬停面板显示自缚说明
+KDModButtonKDSelfKeyShowCounter,状态栏显示自缚锁数量
+KDModButtonKDSelfKeyNameMark,名字角标
+KDSelfKeyMarkStar,※
+KDSelfKeyMarkTag,〔自缚〕
+KDSelfKeyFreeMsg,你解除了自己上锁的 ${LockName}，不消耗钥匙。
+KDSelfKeyLockMsg,你给自己装备了${ITEM}（${LOCK}）， 解锁时不消耗钥匙。
+KDSelfKeyTooltipValid,自缚锁：解锁不消耗钥匙（仍需至少 1 把）
+KDSelfKeyTooltipStale,当前锁已被外力更换：你得失去一把钥匙了
+KDSelfKeyCounterDesc,自缚锁：当前有效件数
+KDSelfKeyModName,自缚钥匙
